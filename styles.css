@@ -1,0 +1,109 @@
+:root {
+  --ink: #201b18;
+  --cream: #f8f2e9;
+  --paper: #fffaf4;
+  --clay: #a55f44;
+  --sand: #d8bfa5;
+  --line: rgba(32, 27, 24, 0.18);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: "DM Sans", sans-serif; }
+a { color: inherit; text-decoration: none; }
+
+.site-header { align-items: center; display: flex; height: 106px; justify-content: space-between; margin: 0 auto; max-width: 1440px; padding: 0 6vw; }
+.brand { align-items: center; display: inline-flex; gap: 11px; white-space: nowrap; }
+.brand-mark { align-items: center; background: var(--clay); border-radius: 50%; color: var(--paper); display: inline-flex; font-size: 18px; font-weight: 700; height: 36px; justify-content: center; width: 36px; }
+.brand-name { font-size: 25px; font-weight: 700; letter-spacing: -0.07em; }
+.brand-type { border-left: 1px solid var(--line); color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .1em; margin-left: 4px; padding-left: 14px; }
+.site-nav { align-items: center; display: flex; gap: clamp(18px, 2.5vw, 42px); font-size: 14px; font-weight: 500; }
+.site-nav a { transition: color .2s ease; }
+.site-nav a:hover, .text-link:hover { color: var(--clay); }
+.nav-contact { border-bottom: 1px solid var(--clay); color: var(--clay); padding-bottom: 4px; }
+.menu-button { background: transparent; border: 0; cursor: pointer; display: none; padding: 8px; }
+.menu-button span { background: var(--ink); display: block; height: 2px; margin: 5px 0; width: 25px; }
+
+.hero { align-items: center; display: grid; gap: clamp(48px, 7vw, 120px); grid-template-columns: minmax(320px, .9fr) minmax(380px, 1fr); margin: 0 auto; max-width: 1440px; min-height: calc(100vh - 106px); padding: 45px 6vw 86px; }
+.eyebrow { color: var(--clay); font-size: 11px; font-weight: 700; letter-spacing: .13em; margin: 0 0 22px; }
+h1, h2 { font-family: "Playfair Display", serif; font-weight: 700; letter-spacing: -.05em; line-height: .98; margin: 0; }
+h1 { font-size: clamp(3.6rem, 7.8vw, 7.2rem); }
+h1 em { color: var(--clay); font-weight: 600; }
+.hero-text { font-size: clamp(1.05rem, 1.5vw, 1.28rem); line-height: 1.5; margin: 36px 0 34px; max-width: 440px; }
+.hero-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 25px; }
+.button { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .04em; padding: 17px 23px; transition: transform .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-dark { background: var(--ink); color: var(--paper); }
+.button-light { background: var(--cream); color: var(--ink); }
+.text-link { border-bottom: 1px solid var(--ink); font-size: 14px; font-weight: 600; padding-bottom: 4px; transition: color .2s ease; }
+.hero-image-wrap { background: var(--sand); margin-left: auto; max-width: 650px; padding: clamp(16px, 2vw, 27px); position: relative; width: 100%; }
+.hero-image { display: block; height: min(63vw, 600px); min-height: 460px; object-fit: cover; object-position: center; width: 100%; }
+.hero-label { background: var(--paper); bottom: 0; color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .11em; padding: 15px 19px; position: absolute; right: 0; }
+.hero-label span { color: var(--clay); }
+.intro-band { background: var(--ink); color: var(--cream); padding: 38px 6vw; text-align: center; }
+.intro-band p { font-family: "Playfair Display", serif; font-size: clamp(1.45rem, 3vw, 2.4rem); letter-spacing: -.035em; margin: 0; }
+
+.section { margin: 0 auto; max-width: 1440px; padding: 120px 6vw; }
+.section-heading { display: grid; grid-template-columns: 1.1fr 1fr; margin-bottom: 48px; }
+.section-heading .eyebrow { grid-column: 1 / -1; }
+h2 { font-size: clamp(2.7rem, 5vw, 4.8rem); }
+.section-heading > p:last-child { align-self: end; font-size: 17px; line-height: 1.55; margin: 0 0 5px auto; max-width: 390px; }
+.collection-grid { display: grid; gap: 18px; grid-template-columns: 1.13fr .87fr .87fr; }
+.collection-card { background: var(--sand); display: block; min-height: 450px; overflow: hidden; position: relative; }
+.collection-card.tall { grid-row: span 2; min-height: 720px; }
+.collection-card img { height: 100%; object-fit: cover; position: absolute; transition: transform .5s ease; width: 100%; }
+.collection-card:hover img { transform: scale(1.045); }
+.collection-card::after { background: linear-gradient(0deg, rgba(25,18,14,.72), transparent 55%); content: ""; inset: 0; position: absolute; }
+.card-overlay { bottom: 0; color: white; display: flex; flex-direction: column; left: 0; padding: 24px; position: absolute; right: 0; z-index: 1; }
+.card-overlay strong { font-family: "Playfair Display", serif; font-size: 33px; letter-spacing: -.04em; }
+.card-overlay small { font-size: 12px; font-weight: 600; margin-top: 6px; }
+
+.about { background: var(--clay); color: var(--cream); display: grid; gap: clamp(45px, 8vw, 130px); grid-template-columns: 1fr 1fr; max-width: none; padding-left: calc((100% - min(1440px, 100%)) / 2 + 6vw); padding-right: calc((100% - min(1440px, 100%)) / 2 + 6vw); }
+.about-image { min-height: 560px; overflow: hidden; }
+.about-image img { height: 100%; object-fit: cover; width: 100%; }
+.about-copy { align-self: center; max-width: 510px; }
+.about-copy .eyebrow { color: var(--sand); }
+.about-copy > p:not(.eyebrow) { font-size: 19px; line-height: 1.58; margin: 28px 0 34px; }
+
+.visit { display: grid; gap: clamp(50px, 10vw, 170px); grid-template-columns: 1.05fr .95fr; }
+.visit-copy { align-self: center; }
+.visit-copy > p:not(.eyebrow) { font-size: 19px; line-height: 1.58; margin: 28px 0 36px; max-width: 540px; }
+.contact-list { border-top: 1px solid var(--line); display: grid; max-width: 500px; }
+.contact-list a { border-bottom: 1px solid var(--line); display: flex; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 600; justify-content: space-between; padding: 18px 0; }
+.contact-list span { color: var(--clay); font-size: 12px; letter-spacing: .08em; padding-top: 5px; }
+.visit-card { align-self: center; background: var(--sand); display: flex; flex-direction: column; min-height: 405px; padding: clamp(32px, 5vw, 62px); }
+.visit-mark { align-items: center; background: var(--clay); border-radius: 50%; color: var(--paper); display: flex; font-family: "Playfair Display", serif; font-size: 30px; height: 64px; justify-content: center; width: 64px; }
+.visit-card p { font-size: 11px; font-weight: 700; letter-spacing: .12em; margin: 35px 0 14px; }
+.visit-card strong { font-family: "Playfair Display", serif; font-size: clamp(1.45rem, 2.4vw, 2rem); letter-spacing: -.035em; line-height: 1.12; max-width: 360px; }
+.visit-card a { border-bottom: 1px solid var(--ink); font-size: 13px; font-weight: 700; margin-top: auto; padding-bottom: 5px; width: fit-content; }
+
+.site-footer { align-items: center; background: var(--ink); color: var(--cream); display: flex; justify-content: space-between; padding: 34px 6vw; }
+.site-footer p, .site-footer > a { color: var(--sand); font-size: 13px; margin: 0; }
+.brand-footer .brand-mark { background: var(--sand); color: var(--ink); }
+
+@media (max-width: 820px) {
+  .site-header { height: 82px; padding: 0 7vw; position: relative; }
+  .brand-name { font-size: 22px; }
+  .brand-type { display: none; }
+  .menu-button { display: block; }
+  .site-nav { background: var(--paper); box-shadow: 0 18px 35px rgba(32,27,24,.14); display: none; flex-direction: column; gap: 0; left: 5vw; padding: 10px 20px; position: absolute; right: 5vw; top: 75px; z-index: 10; }
+  .site-nav.open { display: flex; }
+  .site-nav a { border-bottom: 1px solid var(--line); padding: 16px 0; width: 100%; }
+  .site-nav a:last-child { border: 0; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 60px 7vw 70px; }
+  .hero-image-wrap { margin: 0; }
+  .hero-image { height: 105vw; min-height: 360px; }
+  .section { padding: 80px 7vw; }
+  .section-heading { display: block; }
+  .section-heading > p:last-child { margin: 24px 0 0; }
+  .collection-grid { grid-template-columns: 1fr; }
+  .collection-card, .collection-card.tall { min-height: 450px; }
+  .about, .visit { grid-template-columns: 1fr; }
+  .about { gap: 0; padding: 0; }
+  .about-image { min-height: 430px; }
+  .about-copy { padding: 80px 7vw; }
+  .visit { gap: 55px; }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: 20px; padding: 32px 7vw; }
+}
+
+@media (max-width: 430px) { h1 { font-size: 3.3rem; } .collection-card, .collection-card.tall { min-height: 390px; } }
